@@ -1,0 +1,31 @@
+<html>
+<head>
+	<title>Typee</title>
+	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<script src="script.js"></script>
+</head>
+<body onload="setDynamicBackground()">
+	<!--Modal that appears when user is done typing-->
+	<div id="endModal" class="modal">
+		<div class="modal-content">
+			<span class="close">&times;</span>
+			<p id="modalTime">Calculating...</p>
+		</div>
+	</div>
+	<!--Typing area-->
+	<textarea autofocus id="textbox" placeholder="You may begin typing." onkeypress="return keyPress(event)"></textarea>
+
+	<footer>
+		<!--Modes Menu-->
+		<div class="modesMenu">Modes: 
+			<button id="tildeMode" onclick="endKey = TILDE_KEY">~Whee~</button>
+			<span class="tooltip" id="tildett"> Stop timer with the ~ key </span>
+			<button id="asdfMode" onclick="endKey = ENTER_KEY">asdfghjkl;'</button>
+			<span class="tooltip" id="entertt"> Stop timer with the ENTER key </span>
+			<button id="eMode" onclick="endKey = E_KEY">No E Story</button>
+			<span class="tooltip" id="ett"> Stop timer with the E key </span>
+		</div>
+	</footer>
+</body>
+</html>
